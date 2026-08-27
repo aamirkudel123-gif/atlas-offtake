@@ -41,9 +41,9 @@ export function ComplianceBand() {
             />
             <Reveal delay={300}>
               <p className="mt-7 measure type-lead text-mist">
-                Large industrial transactions depend on governance that holds up
-                to scrutiny. Diligence, screening and chain-of-custody sit inside
-                every trade rather than alongside it.
+                Diligence, screening and chain-of-custody considerations are
+                integrated into relevant engagements rather than treated as a
+                final-stage check.
               </p>
             </Reveal>
           </div>

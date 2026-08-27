@@ -50,9 +50,9 @@ export const HERO = {
 export const POSITIONING = {
   eyebrow: "The Firm",
   statement:
-    "We do not sell products. We build the commercial architecture that moves materials between producers and industry — reliably, and at scale.",
+    "We do not sell products. We build the commercial architecture that moves materials between producers and industry — reliably, with discipline and precision.",
   body: [
-    "Atlas Offtake operates between the producers of the world's critical raw materials and the industries that depend on them. We design procurement solutions that connect qualified producers with industrial consumers — reliably, transparently, and at scale.",
+    "Atlas Offtake operates between the producers of the world's critical raw materials and the industries that depend on them. We design procurement solutions that connect qualified producers with industrial consumers — reliably, transparently and with precision.",
     "Our strength lies not in owning infrastructure, but in connecting the right partners, markets and opportunities with precision, transparency and long-term commitment.",
   ],
   pillars: [
@@ -110,7 +110,7 @@ export const COMMODITIES: Commodity[] = [
     slug: "cobalt",
     name: "Cobalt",
     category: "Battery Materials",
-    description: "Hydroxide sourced through validated channels.",
+    description: "Hydroxide sourced through qualified supply channels.",
     image: "/images/commodity-cobalt.jpg",
     imageAlt: "Deep blue cobalt-bearing mineral crystals against black.",
   },
@@ -119,7 +119,8 @@ export const COMMODITIES: Commodity[] = [
     slug: "nickel",
     name: "Nickel",
     category: "Base Metals",
-    description: "Briquettes and sulphate from LME-registered brands.",
+    description:
+      "Briquettes and sulphate sourced from qualified producers and, where applicable, recognised market brands.",
     image: "/images/commodity-nickel.jpg",
     imageAlt: "Coiled steel-grey metal wire in close macro detail.",
   },
@@ -130,7 +131,7 @@ export const COMMODITIES: Commodity[] = [
     category: "Bulk Commodities",
     description: "Fines and pellets to steelmaking specification.",
     image: "/images/commodity-iron-ore.jpg",
-    imageAlt: "Crushed dark iron ore rock at close range.",
+    imageAlt: "Rust-red iron ore rock photographed at close range.",
   },
   {
     index: "06",
@@ -151,6 +152,9 @@ export const EXTENDED_PORTFOLIO = [
   "Zinc",
   "Tin",
 ] as const;
+
+export const EXTENDED_PORTFOLIO_NOTE =
+  "Focus may evolve according to qualified supply, buyer requirements, availability and applicable regulatory conditions.";
 
 /* ---------------------------------------------------------------- SOLUTIONS */
 
@@ -177,7 +181,7 @@ export const SOLUTIONS: Solution[] = [
     title: "Structured Offtake",
     summary: "Predictable revenue for producers, dependable supply for consumers.",
     points: [
-      "Prepayment structures",
+      "Prepayment and other structured commercial arrangements",
       "Take-or-pay frameworks",
       "Blended pricing formulas",
     ],
@@ -191,14 +195,19 @@ export const SOLUTIONS: Solution[] = [
   {
     index: "04",
     title: "Risk & Compliance",
-    summary: "Diligence, sanctions and responsible sourcing built into every trade.",
+    summary:
+      "Diligence, sanctions and responsible sourcing built into each relevant engagement.",
     points: ["KYC / KYS onboarding", "Sanctions screening", "Chain-of-custody"],
   },
 ];
 
 export const ENGAGEMENT = [
   { index: "01", title: "Discover", body: "Map demand, spec, tenor and geography." },
-  { index: "02", title: "Structure", body: "Design commercial terms and financing." },
+  {
+    index: "02",
+    title: "Structure",
+    body: "Design commercial terms and, where applicable, coordinate appropriate financing arrangements.",
+  },
   { index: "03", title: "Contract", body: "Diligence, documentation, sign-off." },
   { index: "04", title: "Execute", body: "Logistics, quality, settlement." },
   { index: "05", title: "Optimise", body: "Ongoing performance and reporting." },
@@ -230,7 +239,7 @@ export const STAGES: Stage[] = [
     summary: "Structured agreements. Long-term certainty.",
     body: "Commercial terms, tenor and pricing mechanisms are documented into durable agreements.",
     image: "/images/journey-02-contracting.jpg",
-    imageAlt: "Silhouette of a harbour crane against a pale sky.",
+    imageAlt: "Hands signing a commercial agreement across a desk.",
   },
   {
     index: "03",
@@ -238,7 +247,7 @@ export const STAGES: Stage[] = [
     summary: "Coordinated global logistics.",
     body: "Routing, freight, transhipment and documentation are coordinated across each corridor.",
     image: "/images/journey-03-logistics.jpg",
-    imageAlt: "Container terminal at dusk seen from above, stacked to the horizon.",
+    imageAlt: "A bulk vessel alongside a working port terminal with shore cranes.",
   },
   {
     index: "04",
@@ -246,23 +255,23 @@ export const STAGES: Stage[] = [
     summary: "Independent inspection at every stage.",
     body: "Independent inspection and assay confirm the material matches contracted specification.",
     image: "/images/journey-04-quality.jpg",
-    imageAlt: "Close macro detail of dark mineral ore under raking light.",
+    imageAlt: "A technician examining a sample under a laboratory microscope.",
   },
   {
     index: "05",
-    title: "Storage",
-    summary: "Secure storage and inventory management.",
-    body: "Material is held, tracked and released against agreed inventory positions.",
-    image: "/images/journey-05-storage.jpg",
-    imageAlt: "Long aisle inside a dimly lit industrial storage warehouse.",
+    title: "Documentation & Coordination",
+    summary: "Documentation coordinated across the transaction.",
+    body: "Commercial, shipping and inventory documentation is coordinated across the transaction, with third-party storage arranged where required.",
+    image: "/images/journey-05-documentation.jpg",
+    imageAlt: "The cargo data plate and sealed locking bars on a shipping container door.",
   },
   {
     index: "06",
     title: "Delivery",
-    summary: "Delivered on time and to specification.",
-    body: "Final delivery is completed to the consumer's plant, terminal or nominated facility.",
+    summary: "Coordinated to the nominated facility.",
+    body: "Final delivery is coordinated to the consumer's plant, terminal or nominated facility, in accordance with the agreed transaction structure.",
     image: "/images/journey-06-delivery.jpg",
-    imageAlt: "Heavy industrial processing plant structures against an overcast sky.",
+    imageAlt: "A steel works receiving material at its industrial destination.",
   },
 ];
 
@@ -272,7 +281,7 @@ export const COMPLIANCE_PRINCIPLES = [
   {
     index: "01",
     title: "Regulatory Excellence",
-    body: "Maintaining compliance with applicable international regulations across commercial activities.",
+    body: "Applying appropriate compliance controls and due diligence according to the commodity, counterparties, jurisdictions and applicable requirements.",
   },
   {
     index: "02",
@@ -304,18 +313,18 @@ export const COMPLIANCE_LIFECYCLE = [
   },
   {
     index: "03",
-    title: "Approval",
-    body: "Governance sign-off across risk and compliance.",
+    title: "Review & Approval",
+    body: "Appropriate internal review and sign-off according to the engagement's risk profile.",
   },
   {
     index: "04",
     title: "Monitoring",
-    body: "Ongoing surveillance across the trade lifecycle.",
+    body: "Ongoing review where required by the engagement, risk profile or applicable obligations.",
   },
   {
     index: "05",
     title: "Reporting",
-    body: "Transparent disclosure to partners and regulators.",
+    body: "Appropriate documentation and reporting to relevant counterparties and authorities where required.",
   },
 ] as const;
 
@@ -331,13 +340,13 @@ export const FRAMEWORKS = [
 ] as const;
 
 export const FRAMEWORK_DISCLAIMER =
-  "Our approach is informed by internationally recognised frameworks. Reference to these frameworks describes the standards that guide our diligence, and does not indicate certification by, membership of, or affiliation with the named organisations.";
+  "Our approach is informed by internationally recognised frameworks. Reference to these frameworks describes the standards that guide our diligence, and does not indicate certification by, membership of, or affiliation with the named organisations. Frameworks are considered where relevant to the commodity, origin, counterparties, destination and applicable requirements.";
 
 /* -------------------------------------------------------------------- ABOUT */
 
 export const ABOUT = {
   tagline: "Built on trust. Driven by purpose.",
-  lead: "Atlas Offtake bridges producers and industry across global commodity markets through precision logistics, ethical procurement and long-term partnerships.",
+  lead: "Atlas Offtake connects qualified producers with industrial consumers across global commodity markets through disciplined procurement, responsible sourcing and coordinated execution.",
   vision: {
     title: "Vision",
     body: "To be the trusted global procurement partner for critical industrial commodities.",
@@ -348,7 +357,7 @@ export const ABOUT = {
   },
   approach: {
     title: "Approach",
-    body: "Market intelligence, commercial discipline and operational precision, combined to deliver dependable supply solutions.",
+    body: "Market intelligence, commercial discipline and coordinated execution, combined to deliver dependable procurement solutions.",
   },
   values: [
     {
@@ -485,8 +494,8 @@ export const ECOSYSTEM = [
   },
   {
     index: "04",
-    title: "Financial Partners",
-    body: "Institutions supporting trade structures and settlement.",
+    title: "Financial / Trade-Finance Partners",
+    body: "Appropriate institutions or service providers may support trade structures and settlement where required.",
   },
   {
     index: "05",

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Reveal, RevealText } from "@/components/ui/Reveal";
+import { ScrollCue } from "@/components/ui/ScrollCue";
 
 /**
  * Shared page opener. Every interior page uses the same anchors and the same
@@ -13,6 +14,7 @@ export function PageHero({
   image,
   imageAlt,
   objectPosition = "50% 50%",
+  scrim = "standard",
 }: {
   eyebrow: string;
   title: string;
@@ -20,6 +22,8 @@ export function PageHero({
   image: string;
   imageAlt: string;
   objectPosition?: string;
+  /** "strong" for high-key photography that would otherwise wash out the text. */
+  scrim?: "standard" | "strong";
 }) {
   return (
     <section className="relative isolate flex min-h-[30rem] flex-col justify-end overflow-hidden pt-[clamp(9rem,16vw,13rem)] pb-[clamp(3.5rem,6vw,5.5rem)]">
@@ -35,9 +39,20 @@ export function PageHero({
           style={{ objectPosition }}
         />
       </div>
+      {/* Base scrim — carries the headline and lead. */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/70 to-ink/40"
+        className={`absolute inset-0 -z-10 bg-gradient-to-t ${
+          scrim === "strong"
+            ? "from-ink via-ink/80 to-ink/60"
+            : "from-ink via-ink/70 to-ink/40"
+        }`}
+      />
+      {/* Header scrim — the navigation sits hard against the top edge, where a
+          high-key photograph would otherwise wash it out. */}
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 -z-10 h-44 bg-gradient-to-b from-ink/85 via-ink/45 to-transparent"
       />
 
       {/* Screen-reader description of the decorative background. */}
@@ -64,6 +79,12 @@ export function PageHero({
               </Reveal>
             ) : null}
           </div>
+        </div>
+
+        {/* Same scroll indicator as the home hero, on the container's right
+            anchor at the foot of the band. */}
+        <div className="mt-[clamp(2.5rem,4vw,3.5rem)] hidden justify-end xl:flex">
+          <ScrollCue />
         </div>
       </div>
     </section>

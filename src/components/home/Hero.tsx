@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/Primitives";
 import { Reveal, RevealText } from "@/components/ui/Reveal";
+import { ScrollCue } from "@/components/ui/ScrollCue";
 import { HERO } from "@/lib/content";
 
 export function Hero() {
@@ -14,18 +15,18 @@ export function Hero() {
         scales the image to 1.10, and a candidate picked for 100vw would be
         stretched across those extra pixels and go soft.
 
-        The focal point shifts on small screens so the crop keeps the cranes
-        rather than an empty band of sky.
+        The focal point shifts on small screens so the tall crop keeps the
+        cathode blocks and the assay bench rather than an empty edge of desk.
       */}
       <div aria-hidden className="absolute inset-0 -z-20">
         <Image
-          src="/images/hero-port.jpg"
+          src="/images/hero-home.jpg"
           alt=""
           fill
           priority
           quality={90}
           sizes="112vw"
-          className="hero-media object-cover object-[68%_45%] md:object-[50%_42%]"
+          className="hero-media object-cover object-[58%_50%] md:object-[52%_50%]"
         />
       </div>
 
@@ -85,14 +86,7 @@ export function Hero() {
           {/* Scroll cue — sits on the container's right anchor, aligned to the
               baseline of the actions rather than floating mid-canvas. */}
           <div className="col-span-3 col-start-10 hidden self-end justify-self-end pb-1 xl:block">
-            <Reveal delay={1000}>
-              <div className="flex items-center gap-4">
-                <span className="type-index text-stone">Scroll</span>
-                <span aria-hidden className="relative block h-12 w-px bg-chalk/15">
-                  <span className="scroll-cue absolute inset-x-0 top-0 h-5 bg-copper" />
-                </span>
-              </div>
-            </Reveal>
+            <ScrollCue delay={1000} />
           </div>
         </div>
       </div>

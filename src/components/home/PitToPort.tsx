@@ -36,8 +36,8 @@ export function PitToPort() {
             From Pit to Port.
           </h2>
           <p className="col-span-12 measure type-lead text-stone lg:col-span-5 lg:col-start-8">
-            Every stage. Every shipment. Six disciplined stages, coordinated end
-            to end.
+            Every stage. Every transaction. Six disciplined stages, coordinated
+            end to end.
           </p>
         </div>
       </div>

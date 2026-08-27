@@ -20,10 +20,10 @@ export default function SolutionsPage() {
       <PageHero
         eyebrow="Solutions"
         title="Services engineered for certainty."
-        lead="We do not sell products. We build the commercial architecture that moves materials between producers and industry — reliably, and at scale."
+        lead="We do not sell products. We build the commercial architecture that moves materials between producers and industry — reliably, with discipline and precision."
         image="/images/solutions-hero.jpg"
-        imageAlt="The interior of a heavy industrial plant lit by the glow of molten metal."
-        objectPosition="50% 50%"
+        imageAlt="Shipping documents under review beside a live shipment and clearance dashboard."
+        objectPosition="50% 38%"
       />
 
       <section aria-labelledby="disciplines-heading" className="bg-ink">

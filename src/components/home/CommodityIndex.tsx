@@ -4,7 +4,11 @@ import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ArrowLink } from "@/components/ui/Primitives";
 import { Reveal } from "@/components/ui/Reveal";
-import { COMMODITIES, EXTENDED_PORTFOLIO } from "@/lib/content";
+import {
+  COMMODITIES,
+  EXTENDED_PORTFOLIO,
+  EXTENDED_PORTFOLIO_NOTE,
+} from "@/lib/content";
 
 /**
  * Editorial commodity panels.
@@ -57,7 +61,7 @@ export function CommodityIndex() {
             >
               <CommodityPanel
                 commodity={commodity}
-                aspect="aspect-4/5"
+                aspect="min-h-[20rem] lg:min-h-[24rem]"
                 sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 350px"
                 delay={i * 80}
               />
@@ -77,6 +81,9 @@ export function CommodityIndex() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-6 measure text-[0.8125rem] leading-relaxed text-stone">
+                {EXTENDED_PORTFOLIO_NOTE}
+              </p>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:justify-self-end">
@@ -110,7 +117,7 @@ function CommodityPanel({
         className="group relative block h-full overflow-hidden bg-charcoal"
         aria-label={`${commodity.name} — ${commodity.description}`}
       >
-        <div className={`relative w-full ${aspect} min-h-[15rem]`}>
+        <div className={`relative h-full w-full ${aspect}`}>
           <Image
             src={commodity.image}
             alt={commodity.imageAlt}
@@ -132,10 +139,13 @@ function CommodityPanel({
             className="absolute inset-0 bg-navy/0 transition-colors duration-700 group-hover:bg-navy/15"
           />
 
-          <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-7">
+          {/* In flow rather than absolutely positioned. The four small cards
+              carry no fixed aspect, so a longer description grows the card
+              (and, via grid stretch, its whole row) instead of being clipped. */}
+          <div className="relative flex h-full flex-col justify-between gap-10 p-6 lg:p-7">
             <div className="flex items-start justify-between gap-4">
               <span className="type-index text-copper">{commodity.index}</span>
-              <span className="type-index text-stone">
+              <span className="type-index text-right text-stone">
                 {commodity.category.toUpperCase()}
               </span>
             </div>

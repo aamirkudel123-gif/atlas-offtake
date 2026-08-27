@@ -40,8 +40,9 @@ export function InquiryCTA() {
           <div className="col-span-12 lg:col-span-4 lg:col-start-9">
             <Reveal delay={280}>
               <p className="type-body text-mist">
-                Tell us the material, the volume and the tenor. We will come back
-                with a structure.
+                Tell us the material, volume, destination and delivery requirements.
+                We will assess the procurement opportunity and come back with
+                an appropriate structure.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">

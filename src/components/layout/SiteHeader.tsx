@@ -87,12 +87,17 @@ export function SiteHeader() {
             <Image
               src="/atlas-logo-reversed.png"
               alt={SITE.name}
-              width={1360}
-              height={544}
+              width={1612}
+              height={461}
               priority
-              sizes="(max-width: 768px) 132px, 164px"
+              sizes="(max-width: 768px) 190px, (max-width: 1280px) 150px, 250px"
+              /* The lockup is 3.5:1, so height drives a wide mark. It steps up
+                 at xl where the header has room; between lg and xl the nav and
+                 CTA leave less space, so it stays moderate there. */
               className={`w-auto transition-[height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                scrolled ? "h-[26px] md:h-[28px]" : "h-[30px] md:h-[34px]"
+                scrolled
+                  ? "h-[34px] md:h-[36px] lg:h-[26px] xl:h-[40px]"
+                  : "h-[40px] md:h-[44px] lg:h-[28px] xl:h-[50px]"
               }`}
             />
           </Link>
@@ -100,7 +105,11 @@ export function SiteHeader() {
           {/* Desktop navigation */}
           <nav
             aria-label="Primary"
-            className="hidden items-center gap-8 lg:flex xl:gap-10"
+            /* Fluid gap: at exactly 1024px a fixed gap-8 left zero space
+               between the logo, the nav and the CTA. This scales down just
+               enough to keep them apart, and matches the previous spacing
+               from 1440px up. */
+            className="hidden items-center gap-[clamp(1.1rem,2.2vw,2.5rem)] lg:flex xl:gap-10"
           >
             {NAV.map((item) => {
               const active =

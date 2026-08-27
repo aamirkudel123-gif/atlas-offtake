@@ -20,10 +20,11 @@ export default function CompliancePage() {
       <PageHero
         eyebrow="Compliance"
         title="Compliance and governance."
-        lead="Compliance is not simply a requirement — it is the foundation of trust that enables long-term global partnerships."
+        lead="Compliance is integrated into the procurement process and supports the trust required for long-term global partnerships."
         image="/images/compliance-hero.jpg"
-        imageAlt="Industrial silos and processing towers rising against an overcast sky."
-        objectPosition="50% 35%"
+        imageAlt="A laboratory bench arranged with analytical instruments."
+        objectPosition="50% 50%"
+        scrim="strong"
       />
 
       <ComplianceBand />

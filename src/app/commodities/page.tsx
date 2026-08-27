@@ -6,7 +6,11 @@ import { InquiryCTA } from "@/components/home/InquiryCTA";
 import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { COMMODITIES, EXTENDED_PORTFOLIO } from "@/lib/content";
+import {
+  COMMODITIES,
+  EXTENDED_PORTFOLIO,
+  EXTENDED_PORTFOLIO_NOTE,
+} from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Commodities",
@@ -21,10 +25,11 @@ export default function CommoditiesPage() {
       <PageHero
         eyebrow="Commodities"
         title="The materials that build economies."
-        lead="We do not simply supply raw materials. We design procurement solutions that connect qualified producers with industrial consumers — reliably, transparently, and at scale."
+        lead="We do not simply supply raw materials. We design procurement solutions that connect qualified producers with industrial consumers — reliably, transparently and with precision."
         image="/images/commodities-hero.jpg"
-        imageAlt="A bulk carrier under way, seen from above on open water."
-        objectPosition="50% 45%"
+        imageAlt="A conveyor discharging bulk material onto a large stockpile."
+        objectPosition="50% 42%"
+        scrim="strong"
       />
 
       {/* Full-bleed alternating editorial rows. */}
@@ -34,7 +39,7 @@ export default function CommoditiesPage() {
             id="portfolio-heading"
             eyebrow="Portfolio"
             title="Six core commodities."
-            lead="Each procured against contracted specification, with independent inspection at every stage."
+            lead="Each procurement opportunity is assessed against contracted specification, with independent inspection arranged where required."
           />
 
           <ul className="mt-[clamp(3.5rem,6vw,6rem)]">
@@ -146,6 +151,16 @@ export default function CommoditiesPage() {
               </li>
             ))}
           </ul>
+
+          <div className="mt-10 grid-atlas">
+            <div className="col-span-12 lg:col-span-8">
+              <Reveal>
+                <p className="text-[0.875rem] leading-relaxed text-ink/60">
+                  {EXTENDED_PORTFOLIO_NOTE}
+                </p>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 

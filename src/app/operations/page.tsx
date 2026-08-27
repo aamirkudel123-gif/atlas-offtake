@@ -10,7 +10,7 @@ import { ENGAGEMENT } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Operations",
   description:
-    "Efficient operations. Reliable outcomes. From sourcing to delivery, every stage managed with precision — six disciplined stages, from pit to port.",
+    "Disciplined operations. Reliable outcomes. From sourcing to delivery, every stage is coordinated with precision — six disciplined stages, from pit to port.",
   alternates: { canonical: "/operations" },
 };
 
@@ -19,11 +19,11 @@ export default function OperationsPage() {
     <>
       <PageHero
         eyebrow="Operations"
-        title="From mine to market. Managed end to end."
-        lead="Efficient operations. Reliable outcomes. From sourcing to delivery, every stage is managed with precision."
+        title="From source to market. Coordinated end to end."
+        lead="Disciplined operations. Reliable outcomes. From sourcing to delivery, every stage is coordinated with precision."
         image="/images/operations-hero.jpg"
-        imageAlt="An aerial view of a container terminal at dusk, stacked to the horizon."
-        objectPosition="50% 60%"
+        imageAlt="A bulk carrier alongside a ship-loading conveyor at sunset."
+        objectPosition="50% 50%"
       />
 
       <PitToPort />

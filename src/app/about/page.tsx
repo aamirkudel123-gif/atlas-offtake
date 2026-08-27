@@ -25,8 +25,8 @@ export default function AboutPage() {
         title={ABOUT.tagline}
         lead={ABOUT.lead}
         image="/images/about-hero.jpg"
-        imageAlt="A bulk carrier at anchor beneath a wide, cloud-banded sky at dusk."
-        objectPosition="50% 82%"
+        imageAlt="Four counterparties standing together above a container terminal at dusk, the city beyond."
+        objectPosition="50% 42%"
       />
 
       {/* Vision / Mission / Approach */}
@@ -127,12 +127,12 @@ export default function AboutPage() {
               <Reveal delay={160}>
                 <div className="relative aspect-4/5 w-full overflow-hidden bg-charcoal">
                   <Image
-                    src="/images/journey-02-contracting.jpg"
-                    alt="A harbour crane in silhouette against an even, pale sky."
+                    src="/images/about-partnership.jpg"
+                    alt="Financial district towers at blue hour across the river."
                     fill
                     loading="lazy"
                     sizes="(max-width: 1024px) 92vw, 32vw"
-                    className="object-cover"
+                    className="object-cover object-[62%_50%]"
                   />
                 </div>
               </Reveal>
