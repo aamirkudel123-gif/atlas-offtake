@@ -22,9 +22,10 @@ export default function CompliancePage() {
         title="Compliance and governance."
         lead="Compliance is integrated into the procurement process and supports the trust required for long-term global partnerships."
         image="/images/compliance-hero.jpg"
-        imageAlt="A laboratory bench arranged with analytical instruments."
+        imageAlt="An assay bench: cathode blocks, mineral samples and a sample analysis report under inspection."
         objectPosition="50% 50%"
         scrim="strong"
+        settle="navy"
       />
 
       <ComplianceBand />

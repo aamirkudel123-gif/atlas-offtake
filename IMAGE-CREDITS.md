@@ -14,14 +14,13 @@ Each entry is the Unsplash photo ID. To re-fetch at a different size:
 
 | File | Unsplash photo ID | Subject |
 | --- | --- | --- |
-| hero-home.jpg | Client-supplied | Assay bench: cathode blocks, mineral samples and a sample analysis report |
-| hero-port.jpg | photo-1551617508-65a8e1cddcc2 | Container port at blue hour — retained, no longer referenced |
+| hero-port.jpg | photo-1551617508-65a8e1cddcc2 | Container port at blue hour |
 | about-partnership.jpg | photo-1564613655919-3b475e66f0ae | Financial district at blue hour across the river |
 | operations-hero.jpg | photo-1712826815889-f79372bde8ab | Bulk vessel at a ship-loading conveyor at sunset |
 | commodities-hero.jpg | photo-1651673206446-4fe392ac52b7 | Conveyor discharging bulk material onto a stockpile |
 | network-hero.jpg | photo-1551403793-9beb68d417af | Bulk carrier on open ocean |
 | about-hero.jpg | Client-supplied | Four counterparties above a container terminal at dusk |
-| compliance-hero.jpg | photo-1602052577122-f73b9710adba | Laboratory bench with analytical instruments |
+| compliance-hero.jpg | Client-supplied | Assay bench: cathode blocks, mineral samples and a sample analysis report |
 | solutions-hero.jpg | Client-supplied | Shipping documents under review beside a clearance dashboard |
 | cta-band.jpg | photo-1494412519320-aa613dfb7738 | Container yard from above |
 | journey-01-sourcing.jpg | photo-1560872236-f1232b00263f | Open-pit mine benches |

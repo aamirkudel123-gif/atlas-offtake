@@ -27,6 +27,7 @@ export default function AboutPage() {
         image="/images/about-hero.jpg"
         imageAlt="Four counterparties standing together above a container terminal at dusk, the city beyond."
         objectPosition="50% 42%"
+        settle="paper"
       />
 
       {/* Vision / Mission / Approach */}

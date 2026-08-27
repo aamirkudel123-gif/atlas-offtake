@@ -15,18 +15,18 @@ export function Hero() {
         scales the image to 1.10, and a candidate picked for 100vw would be
         stretched across those extra pixels and go soft.
 
-        The focal point shifts on small screens so the tall crop keeps the
-        cathode blocks and the assay bench rather than an empty edge of desk.
+        The focal point shifts on small screens so the crop keeps the cranes
+        rather than an empty band of sky.
       */}
       <div aria-hidden className="absolute inset-0 -z-20">
         <Image
-          src="/images/hero-home.jpg"
+          src="/images/hero-port.jpg"
           alt=""
           fill
           priority
           quality={90}
           sizes="112vw"
-          className="hero-media object-cover object-[58%_50%] md:object-[52%_50%]"
+          className="hero-media object-cover object-[68%_45%] md:object-[50%_42%]"
         />
       </div>
 
