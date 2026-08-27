@@ -27,17 +27,15 @@ export default function AboutPage() {
         image="/images/about-hero.jpg"
         imageAlt="Four counterparties standing together above a container terminal at dusk, the city beyond."
         objectPosition="50% 42%"
-        settle="paper"
       />
 
       {/* Vision / Mission / Approach */}
-      <section aria-labelledby="foundation-heading" className="bg-paper text-ink">
+      <section aria-labelledby="foundation-heading" className="bg-ink">
         <div className="container-atlas section-y">
           <SectionHeader
             id="foundation-heading"
             eyebrow="Foundation"
             title="What the firm is for."
-            tone="light"
           />
 
           <dl className="mt-[clamp(3rem,5vw,5rem)] grid-atlas gap-y-12">
@@ -47,9 +45,9 @@ export default function AboutPage() {
                 className="col-span-12 md:col-span-6 lg:col-span-4"
               >
                 <Reveal delay={i * 110}>
-                  <div className="h-px w-full bg-paper-line" />
-                  <dt className="pt-6 type-h3 text-ink">{pillar.title}</dt>
-                  <dd className="mt-5 measure type-body text-ink/65">
+                  <div className="h-px w-full bg-hairline" />
+                  <dt className="pt-6 type-h3 text-chalk">{pillar.title}</dt>
+                  <dd className="mt-5 measure type-body text-mist">
                     {pillar.body}
                   </dd>
                 </Reveal>

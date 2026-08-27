@@ -7,23 +7,38 @@ import {
 } from "@/lib/content";
 
 /**
- * The one section that uses the brand navy as a ground rather than an accent.
- * Reserving it for governance gives the colour a job instead of a habit.
+ * On the home page this is the one section that uses the brand navy as a
+ * ground rather than an accent: reserving it for governance gives the colour a
+ * job instead of a habit.
+ *
+ * On /compliance it runs directly beneath the hero, where the navy would put a
+ * coloured band against the foot of the photograph. There it takes the ink
+ * ground instead, so the hero resolves into the section with no seam — the
+ * same treatment as the section below the About hero. Type is already set for
+ * a dark ground, so only the ground and its wash change.
  */
-export function ComplianceBand() {
+export function ComplianceBand({
+  ground = "navy",
+}: {
+  ground?: "navy" | "ink";
+} = {}) {
   return (
     <section
       aria-labelledby="compliance-heading"
-      className="relative isolate overflow-hidden bg-navy-abyss"
+      className={`relative isolate overflow-hidden ${
+        ground === "ink" ? "bg-ink" : "bg-navy-abyss"
+      }`}
     >
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(80% 70% at 20% 0%, rgba(15,42,98,0.85) 0%, rgba(6,18,46,0) 65%)",
-        }}
-      />
+      {ground === "navy" ? (
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10"
+          style={{
+            background:
+              "radial-gradient(80% 70% at 20% 0%, rgba(15,42,98,0.85) 0%, rgba(6,18,46,0) 65%)",
+          }}
+        />
+      ) : null}
 
       <div className="container-atlas section-y">
         <div className="grid-atlas gap-y-8">

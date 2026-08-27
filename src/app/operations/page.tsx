@@ -22,11 +22,11 @@ export default function OperationsPage() {
         title="From source to market. Coordinated end to end."
         lead="Disciplined operations. Reliable outcomes. From sourcing to delivery, every stage is coordinated with precision."
         image="/images/operations-hero.jpg"
-        imageAlt="A bulk carrier alongside a ship-loading conveyor at sunset."
+        imageAlt="Two engineers above a working open-pit mine at dusk, the haul roads, plant and loading berth below."
         objectPosition="50% 50%"
       />
 
-      <PitToPort />
+      <PitToPort ground="ink" />
 
       {/* Engagement sequence */}
       <section aria-labelledby="engagement-heading" className="bg-paper text-ink">

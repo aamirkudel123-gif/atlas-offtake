@@ -16,7 +16,7 @@ Each entry is the Unsplash photo ID. To re-fetch at a different size:
 | --- | --- | --- |
 | hero-port.jpg | photo-1551617508-65a8e1cddcc2 | Container port at blue hour |
 | about-partnership.jpg | photo-1564613655919-3b475e66f0ae | Financial district at blue hour across the river |
-| operations-hero.jpg | photo-1712826815889-f79372bde8ab | Bulk vessel at a ship-loading conveyor at sunset |
+| operations-hero.jpg | Client-supplied | Engineers above a working open-pit mine at dusk, plant and loading berth beyond |
 | commodities-hero.jpg | photo-1651673206446-4fe392ac52b7 | Conveyor discharging bulk material onto a stockpile |
 | network-hero.jpg | photo-1551403793-9beb68d417af | Bulk carrier on open ocean |
 | about-hero.jpg | Client-supplied | Four counterparties above a container terminal at dusk |

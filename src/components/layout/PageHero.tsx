@@ -4,18 +4,6 @@ import { Reveal, RevealText } from "@/components/ui/Reveal";
 import { ScrollCue } from "@/components/ui/ScrollCue";
 
 /**
- * The ground the hero settles into at its foot. Most pages open onto `bg-ink`,
- * which the base scrim already resolves to — so they need nothing. Where the
- * band below is a different colour the photograph would otherwise stop against
- * a straight horizontal edge, so the hero ramps into that colour instead.
- */
-const SETTLE = {
-  ink: null,
-  navy: "from-navy-abyss via-navy-abyss/55",
-  paper: "from-paper via-paper/55",
-} as const;
-
-/**
  * Shared page opener. Every interior page uses the same anchors and the same
  * scrim recipe so headers never drift between pages.
  */
@@ -27,7 +15,6 @@ export function PageHero({
   imageAlt,
   objectPosition = "50% 50%",
   scrim = "standard",
-  settle = "ink",
 }: {
   eyebrow: string;
   title: string;
@@ -37,8 +24,6 @@ export function PageHero({
   objectPosition?: string;
   /** "strong" for high-key photography that would otherwise wash out the text. */
   scrim?: "standard" | "strong";
-  /** Ground of the section immediately below, so the foot of the hero has no seam. */
-  settle?: keyof typeof SETTLE;
 }) {
   return (
     <section className="relative isolate flex min-h-[30rem] flex-col justify-end overflow-hidden pt-[clamp(9rem,16vw,13rem)] pb-[clamp(3.5rem,6vw,5.5rem)]">
@@ -69,15 +54,6 @@ export function PageHero({
         aria-hidden
         className="absolute inset-x-0 top-0 -z-10 h-44 bg-gradient-to-b from-ink/85 via-ink/45 to-transparent"
       />
-      {/* Foot — the hero resolves into the ground of the band below rather than
-          ending on a hard horizontal edge. Sits over the type scrim but under
-          the content, and only the photograph's dead space is in its reach. */}
-      {SETTLE[settle] ? (
-        <div
-          aria-hidden
-          className={`absolute inset-x-0 bottom-0 -z-10 h-[clamp(4rem,9vh,6.5rem)] bg-gradient-to-t to-transparent ${SETTLE[settle]}`}
-        />
-      ) : null}
 
       {/* Screen-reader description of the decorative background. */}
       <span className="sr-only">{imageAlt}</span>

@@ -21,11 +21,28 @@ function useIsDesktop() {
   return isDesktop;
 }
 
-export function PitToPort() {
+/**
+ * On the home page this sits between other bands and takes charcoal, a step up
+ * from the page ground, to separate itself from them.
+ *
+ * On /operations it runs directly beneath the hero, where charcoal would leave
+ * a step against the foot of the photograph — the hero's scrim resolves to
+ * ink. There it takes the ink ground so the hero carries straight into the
+ * section, the same treatment as the section below the About hero. Type is
+ * already set for a dark ground, so only the ground changes.
+ */
+export function PitToPort({
+  ground = "charcoal",
+}: {
+  ground?: "charcoal" | "ink";
+} = {}) {
   const isDesktop = useIsDesktop();
 
   return (
-    <section aria-labelledby="journey-heading" className="bg-charcoal">
+    <section
+      aria-labelledby="journey-heading"
+      className={ground === "ink" ? "bg-ink" : "bg-charcoal"}
+    >
       <div className="container-atlas pt-[var(--spacing-section)]">
         <Eyebrow>Operations</Eyebrow>
         <div className="mt-8 grid-atlas items-end gap-y-6">

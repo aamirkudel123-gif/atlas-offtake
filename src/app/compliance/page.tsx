@@ -25,10 +25,9 @@ export default function CompliancePage() {
         imageAlt="An assay bench: cathode blocks, mineral samples and a sample analysis report under inspection."
         objectPosition="50% 50%"
         scrim="strong"
-        settle="navy"
       />
 
-      <ComplianceBand />
+      <ComplianceBand ground="ink" />
 
       {/* Frameworks */}
       <section aria-labelledby="frameworks-heading" className="bg-paper text-ink">
