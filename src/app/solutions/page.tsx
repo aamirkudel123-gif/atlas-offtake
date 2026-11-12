@@ -10,7 +10,7 @@ import { ENGAGEMENT } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "Strategic procurement, structured offtake, supply chain advisory and risk & compliance — the commercial architecture that moves materials between producers and industry.",
+    "Strategic procurement, structured offtake and supply chain advisory — the commercial architecture that moves materials between producers and industry.",
   alternates: { canonical: "/solutions" },
 };
 
@@ -31,7 +31,7 @@ export default function SolutionsPage() {
           <SectionHeader
             id="disciplines-heading"
             eyebrow="Disciplines"
-            title="Four disciplines, one mandate."
+            title="Three disciplines, one mandate."
           />
 
           <div className="mt-[clamp(3.5rem,6vw,6rem)]">

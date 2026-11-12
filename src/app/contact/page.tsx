@@ -83,7 +83,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-10 border-t border-hairline pt-7">
-                  <p className="type-eyebrow text-stone">Coverage</p>
+                  <p className="type-eyebrow text-stone">Commercial Coverage</p>
+                  <p className="mt-5 type-body text-stone">
+                    Markets served from Hong Kong. Not office locations.
+                  </p>
                   <ul className="mt-5 space-y-2.5">
                     {REGIONS.map((region) => (
                       <li key={region.id} className="type-body text-mist">
@@ -93,15 +96,6 @@ export default function ContactPage() {
                   </ul>
                 </div>
 
-                <div className="mt-10 border-t border-hairline pt-7">
-                  <p className="type-eyebrow text-stone">Compliance</p>
-                  <a
-                    href={`mailto:${SITE.complianceEmail}`}
-                    className="mt-5 inline-block break-words type-body text-mist transition-colors duration-300 hover:text-copper"
-                  >
-                    {SITE.complianceEmail}
-                  </a>
-                </div>
               </Reveal>
             </aside>
           </div>

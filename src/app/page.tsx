@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { CommodityIndex } from "@/components/home/CommodityIndex";
-import { ComplianceBand } from "@/components/home/ComplianceBand";
 import { Hero } from "@/components/home/Hero";
 import { InquiryCTA } from "@/components/home/InquiryCTA";
 import { NetworkSection } from "@/components/home/NetworkSection";
@@ -22,7 +21,6 @@ export default function HomePage() {
       <PitToPort />
       <CommodityIndex />
       <SolutionsEditorial />
-      <ComplianceBand />
       <InquiryCTA />
     </>
   );

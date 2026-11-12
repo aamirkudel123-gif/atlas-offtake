@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SOLUTIONS } from "@/lib/content";
 
 /**
- * Four solutions as full-width numbered rows rather than four equal cards.
+ * Each solution as a full-width numbered row rather than an equal card.
  * The number sits in the left margin so the rows share the section's anchors.
  */
 export function SolutionsEditorial() {
@@ -15,7 +15,7 @@ export function SolutionsEditorial() {
           id="solutions-heading"
           eyebrow="Solutions"
           title="Services engineered for certainty."
-          lead="Four disciplines that carry a transaction from first conversation to delivered material."
+          lead="Three disciplines that carry a transaction from first conversation to delivered material."
           tone="light"
         />
 

@@ -3,9 +3,17 @@
  *
  * Every corporate claim here is carried over from the existing Atlas Offtake
  * site. No statistics, offices, clients, certifications, owned assets or ESG
- * claims have been introduced. Framework references use "informed by" language
- * deliberately - Atlas is not stated to be certified by or affiliated with any
- * of the named bodies.
+ * claims have been introduced.
+ *
+ * Scope rules this file must keep to:
+ *
+ * - Hong Kong SAR is the only office. Regions are commercial coverage only and
+ *   must never be written as locations, branches or distribution operations.
+ * - No regulated or compliance-service capability is claimed: no KYC/KYS
+ *   onboarding, sanctions screening, compliance mapping or diligence
+ *   programme, and no certification, licence, membership or accreditation.
+ * - No owned or operated infrastructure. Inspection, storage and freight are
+ *   described as independent or third-party.
  */
 
 export const SITE = {
@@ -14,7 +22,7 @@ export const SITE = {
   tagline:
     "Strategic procurement and structured offtake for critical industrial commodities.",
   email: "inquiries@atlasofftake.com",
-  complianceEmail: "compliance@atlasofftake.com",
+  /** The only office. Regions elsewhere in this file are coverage, not sites. */
   registeredOffice: "Hong Kong SAR",
 } as const;
 
@@ -26,7 +34,6 @@ export const NAV: NavItem[] = [
   { label: "Commodities", href: "/commodities" },
   { label: "Solutions", href: "/solutions" },
   { label: "Global Network", href: "/global-network" },
-  { label: "Compliance", href: "/compliance" },
 ];
 
 /**
@@ -190,14 +197,7 @@ export const SOLUTIONS: Solution[] = [
     index: "03",
     title: "Supply Chain Advisory",
     summary: "Strategic market intelligence for resilient supply chains.",
-    points: ["Market analysis", "Route optimisation", "Compliance mapping"],
-  },
-  {
-    index: "04",
-    title: "Risk & Compliance",
-    summary:
-      "Diligence, sanctions and responsible sourcing built into each relevant engagement.",
-    points: ["KYC / KYS onboarding", "Sanctions screening", "Chain-of-custody"],
+    points: ["Market analysis", "Route optimisation"],
   },
 ];
 
@@ -229,7 +229,7 @@ export const STAGES: Stage[] = [
     index: "01",
     title: "Sourcing",
     summary: "Qualified suppliers. Commercially aligned.",
-    body: "Producers are identified, screened and commercially aligned before any material moves.",
+    body: "Producers are identified, qualified and commercially aligned before any material moves.",
     image: "/images/journey-01-sourcing.jpg",
     imageAlt: "Aerial view of terraced open-pit mine benches.",
   },
@@ -274,73 +274,6 @@ export const STAGES: Stage[] = [
     imageAlt: "A steel works receiving material at its industrial destination.",
   },
 ];
-
-/* --------------------------------------------------------------- COMPLIANCE */
-
-export const COMPLIANCE_PRINCIPLES = [
-  {
-    index: "01",
-    title: "Regulatory Excellence",
-    body: "Applying appropriate compliance controls and due diligence according to the commodity, counterparties, jurisdictions and applicable requirements.",
-  },
-  {
-    index: "02",
-    title: "Responsible Sourcing",
-    body: "Working with qualified counterparties through responsible and transparent procurement practices.",
-  },
-  {
-    index: "03",
-    title: "Risk Management",
-    body: "Managing commercial, operational and counterparty risks throughout the procurement lifecycle.",
-  },
-  {
-    index: "04",
-    title: "Transparency",
-    body: "Promoting clear communication, accountability and ethical business conduct.",
-  },
-] as const;
-
-export const COMPLIANCE_LIFECYCLE = [
-  {
-    index: "01",
-    title: "Assessment",
-    body: "Origin, counterparty and jurisdiction analysis.",
-  },
-  {
-    index: "02",
-    title: "Verification",
-    body: "Documentary and independent third-party checks.",
-  },
-  {
-    index: "03",
-    title: "Review & Approval",
-    body: "Appropriate internal review and sign-off according to the engagement's risk profile.",
-  },
-  {
-    index: "04",
-    title: "Monitoring",
-    body: "Ongoing review where required by the engagement, risk profile or applicable obligations.",
-  },
-  {
-    index: "05",
-    title: "Reporting",
-    body: "Appropriate documentation and reporting to relevant counterparties and authorities where required.",
-  },
-] as const;
-
-export const FRAMEWORKS = [
-  { name: "OECD Due Diligence Guidance", scope: "Responsible mineral supply chains" },
-  { name: "LME Responsible Sourcing Guidance", scope: "Listed brand expectations" },
-  { name: "EITI Principles", scope: "Extractive sector transparency" },
-  {
-    name: "UN Global Compact Principles",
-    scope: "Human rights, labour, environment, anti-corruption",
-  },
-  { name: "ISO 37001", scope: "Anti-bribery management systems" },
-] as const;
-
-export const FRAMEWORK_DISCLAIMER =
-  "Our approach is informed by internationally recognised frameworks. Reference to these frameworks describes the standards that guide our diligence, and does not indicate certification by, membership of, or affiliation with the named organisations. Frameworks are considered where relevant to the commodity, origin, counterparties, destination and applicable requirements.";
 
 /* -------------------------------------------------------------------- ABOUT */
 
@@ -424,7 +357,7 @@ export const REGIONS: Region[] = [
     id: "europe",
     name: "Europe",
     role: "Industrial Demand",
-    body: "Supporting industrial consumers with compliant sourcing and long-term procurement strategies.",
+    body: "Supporting industrial consumers with dependable sourcing and long-term procurement strategies.",
     x: 522,
     y: 116,
     anchor: "end",
@@ -442,7 +375,7 @@ export const REGIONS: Region[] = [
     id: "middle-east",
     name: "Middle East",
     role: "Coordination",
-    body: "Commercial coordination, regional distribution and cross-border procurement solutions.",
+    body: "Commercial coordination and cross-border procurement solutions across the region.",
     x: 646,
     y: 180,
     anchor: "end",
@@ -515,7 +448,6 @@ export const AREAS_OF_INTEREST = [
   "Strategic Procurement",
   "Structured Offtake",
   "Supply Chain Advisory",
-  "Risk & Compliance",
   "Producer Partnership",
   "General Inquiry",
 ] as const;

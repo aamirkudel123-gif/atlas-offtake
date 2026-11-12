@@ -86,14 +86,6 @@ export function SiteFooter() {
                 </ul>
               </>
             ) : null}
-
-            <p className="mt-8 type-eyebrow text-ink/60">Compliance</p>
-            <a
-              href={`mailto:${SITE.complianceEmail}`}
-              className="mt-6 block text-[0.9375rem] break-words text-ink/75 transition-colors duration-300 hover:text-navy"
-            >
-              {SITE.complianceEmail}
-            </a>
           </div>
         </div>
 
