@@ -222,6 +222,12 @@ export type Stage = {
   body: string;
   image: string;
   imageAlt: string;
+  /**
+   * Focal point for object-cover. The desktop panel is 4:5 while these
+   * photographs are 3:2, so the crop is severe and the subject has to be
+   * nominated per stage or it falls outside the frame.
+   */
+  focus?: string;
 };
 
 export const STAGES: Stage[] = [
@@ -231,7 +237,9 @@ export const STAGES: Stage[] = [
     summary: "Qualified suppliers. Commercially aligned.",
     body: "Producers are identified, qualified and commercially aligned before any material moves.",
     image: "/images/journey-01-sourcing.jpg",
-    imageAlt: "Aerial view of terraced open-pit mine benches.",
+    imageAlt:
+      "Haul trucks and excavators working the benches of an open-pit mine at dusk.",
+    focus: "50% 58%",
   },
   {
     index: "02",
@@ -239,7 +247,9 @@ export const STAGES: Stage[] = [
     summary: "Structured agreements. Long-term certainty.",
     body: "Commercial terms, tenor and pricing mechanisms are documented into durable agreements.",
     image: "/images/journey-02-contracting.jpg",
-    imageAlt: "Hands signing a commercial agreement across a desk.",
+    imageAlt:
+      "A commercial agreement being signed across a desk, specifications alongside.",
+    focus: "54% 50%",
   },
   {
     index: "03",
@@ -247,7 +257,9 @@ export const STAGES: Stage[] = [
     summary: "Coordinated global logistics.",
     body: "Routing, freight, transhipment and documentation are coordinated across each corridor.",
     image: "/images/journey-03-logistics.jpg",
-    imageAlt: "A bulk vessel alongside a working port terminal with shore cranes.",
+    imageAlt:
+      "Containers moving between truck, forklift and ship at a port terminal at sunset.",
+    focus: "50% 55%",
   },
   {
     index: "04",
@@ -255,7 +267,9 @@ export const STAGES: Stage[] = [
     summary: "Independent inspection at every stage.",
     body: "Independent inspection and assay confirm the material matches contracted specification.",
     image: "/images/journey-04-quality.jpg",
-    imageAlt: "A technician examining a sample under a laboratory microscope.",
+    imageAlt:
+      "A gloved inspector measuring an ore sample with calipers beside a quality inspection report.",
+    focus: "56% 50%",
   },
   {
     index: "05",
@@ -271,7 +285,9 @@ export const STAGES: Stage[] = [
     summary: "Coordinated to the nominated facility.",
     body: "Final delivery is coordinated to the consumer's plant, terminal or nominated facility, in accordance with the agreed transaction structure.",
     image: "/images/journey-06-delivery.jpg",
-    imageAlt: "A steel works receiving material at its industrial destination.",
+    imageAlt:
+      "A grab discharging bulk material into a hopper wagon alongside a vessel at the quay.",
+    focus: "68% 50%",
   },
 ];
 

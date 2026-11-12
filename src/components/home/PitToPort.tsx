@@ -204,6 +204,7 @@ function PinnedJourney() {
                     priority={i === 0}
                     className="object-cover transition-[opacity,transform] duration-[1100ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                     style={{
+                      objectPosition: stage.focus ?? "50% 50%",
                       opacity: i === index ? 1 : 0,
                       transform: i === index ? "scale(1)" : "scale(1.05)",
                     }}
@@ -255,6 +256,7 @@ function StageList() {
               sizes="(max-width: 640px) 92vw, 88vw"
               loading={i === 0 ? "eager" : "lazy"}
               className="object-cover"
+              style={{ objectPosition: stage.focus ?? "50% 50%" }}
             />
           </div>
 
