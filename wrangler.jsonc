@@ -1,0 +1,39 @@
+/**
+ * Cloudflare Workers configuration.
+ *
+ * This file is the deploy definition that was previously missing: the
+ * dashboard ran `npx wrangler deploy` against a repository that carried no
+ * wrangler config and no Worker entry point, so a Git build could never
+ * produce a deployable artefact and the live versions were uploaded by hand.
+ *
+ * The three bindings below are the ones the running Worker already has. They
+ * are what @opennextjs/cloudflare expects, so a deploy from here matches the
+ * deployed shape rather than replacing it.
+ *
+ * Custom domains (atlasofftake.com, www.atlasofftake.com) stay attached to the
+ * Worker in the dashboard. They are deliberately not declared as `routes`
+ * here, so a deploy leaves them untouched.
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "atlas-offtake",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-10",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "images": {
+    "binding": "IMAGES"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "atlas-offtake"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
