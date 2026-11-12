@@ -23,17 +23,17 @@ Each entry is the Unsplash photo ID. To re-fetch at a different size:
 | compliance-hero.jpg | Client-supplied | Assay bench: cathode blocks, mineral samples and a sample analysis report |
 | solutions-hero.jpg | Client-supplied | Shipping documents under review beside a clearance dashboard |
 | cta-band.jpg | photo-1494412519320-aa613dfb7738 | Container yard from above |
-| journey-01-sourcing.jpg | photo-1560872236-f1232b00263f | Open-pit mine benches |
-| journey-02-contracting.jpg | photo-1627514818551-db74fc995e9b | Signing a commercial agreement |
-| journey-03-logistics.jpg | photo-1686851234353-74ac1c1a24f4 | Bulk vessel alongside a port terminal |
-| journey-04-quality.jpg | photo-1511174511562-5f7f18b874f8 | Laboratory sample analysis under a microscope |
-| journey-06-delivery.jpg | photo-1760378105099-968c06b9b4bd | Steel works at the industrial destination |
-| commodity-copper.jpg | photo-1584774354932-62ceb99e6053 | Coiled copper conductor |
-| commodity-lithium.jpg | photo-1635860939201-076792531a86 | Lithium brine evaporation ponds |
-| commodity-cobalt.jpg | photo-1584714553121-fd26575f4e07 | Blue cobalt-bearing crystals |
-| commodity-nickel.jpg | photo-1644238017851-21f15062c213 | Steel-grey coiled wire |
-| commodity-iron-ore.jpg | photo-1752006478044-7511e51ecdd5 | Rust-red iron ore rock |
-| commodity-rare-earths.jpg | photo-1584715642477-43b8901b5e6e | Iridescent mineral concentrate |
+| journey-01-sourcing.jpg | Client-supplied | Haul trucks and excavators at an open-pit mine at dusk |
+| journey-02-contracting.jpg | Client-supplied | A commercial agreement being signed |
+| journey-03-logistics.jpg | Client-supplied | Containers, trucks and ship at a port terminal at sunset |
+| journey-04-quality.jpg | Client-supplied | An ore sample measured with calipers beside an inspection report |
+| journey-06-delivery.jpg | Client-supplied | A grab discharging bulk material into a hopper wagon |
+| commodity-copper.jpg | Client-supplied | Banded stacks of copper cathode sheets |
+| commodity-lithium.jpg | Client-supplied | Battery-grade lithium carbonate powder and bulk bags |
+| commodity-cobalt.jpg | Client-supplied | Banded cobalt ingots |
+| commodity-nickel.jpg | Client-supplied | Palletised nickel ingots |
+| commodity-iron-ore.jpg | Client-supplied | Iron ore stockpiles with stacker and conveyor |
+| commodity-rare-earths.jpg | Client-supplied | Reference chart of rare earth minerals, oxides and end uses |
 | og.jpg | photo-1551617508-65a8e1cddcc2 | OpenGraph card (1200x630 crop of hero) |
 
 ## Logo

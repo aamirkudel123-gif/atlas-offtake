@@ -126,6 +126,9 @@ function CommodityPanel({
             priority={priority}
             loading={priority ? undefined : "lazy"}
             sizes={sizes}
+            /* These cards are small and sit under a caption, so they stay on
+               cover even for a graphic: contained, a chart here is unreadable
+               and fights the text. The full chart is shown on /commodities. */
             className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
           />
 

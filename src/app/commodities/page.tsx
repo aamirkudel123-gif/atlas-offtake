@@ -63,7 +63,7 @@ export default function CommoditiesPage() {
                             priority={i === 0}
                             loading={i === 0 ? undefined : "lazy"}
                             sizes="(max-width: 1024px) 92vw, 40vw"
-                            className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
+                            className={`${commodity.fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]`}
                           />
                         </div>
                       </div>

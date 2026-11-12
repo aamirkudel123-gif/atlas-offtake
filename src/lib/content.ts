@@ -91,6 +91,12 @@ export type Commodity = {
   description: string;
   image: string;
   imageAlt: string;
+  /**
+   * "contain" for a card whose image is an information graphic rather than a
+   * photograph. Cover crops a few percent off each edge, which is harmless on
+   * a photograph and slices the headings off a chart.
+   */
+  fit?: "cover" | "contain";
 };
 
 export const COMMODITIES: Commodity[] = [
@@ -101,7 +107,7 @@ export const COMMODITIES: Commodity[] = [
     category: "Base Metals",
     description: "Grade A cathodes for wiring, motors and grids.",
     image: "/images/commodity-copper.jpg",
-    imageAlt: "Coiled copper conductor lit against a dark industrial background.",
+    imageAlt: "Banded stacks of copper cathode sheets on a plant floor.",
   },
   {
     index: "02",
@@ -110,7 +116,8 @@ export const COMMODITIES: Commodity[] = [
     category: "Battery Materials",
     description: "Carbonate and hydroxide for cell manufacturing.",
     image: "/images/commodity-lithium.jpg",
-    imageAlt: "Aerial view of lithium brine evaporation ponds in graded tones.",
+    imageAlt:
+      "Battery-grade lithium carbonate powder open beside bulk bags of the same material.",
   },
   {
     index: "03",
@@ -119,7 +126,7 @@ export const COMMODITIES: Commodity[] = [
     category: "Battery Materials",
     description: "Hydroxide sourced through qualified supply channels.",
     image: "/images/commodity-cobalt.jpg",
-    imageAlt: "Deep blue cobalt-bearing mineral crystals against black.",
+    imageAlt: "Banded and stacked cobalt ingots marked to a minimum purity.",
   },
   {
     index: "04",
@@ -129,7 +136,7 @@ export const COMMODITIES: Commodity[] = [
     description:
       "Briquettes and sulphate sourced from qualified producers and, where applicable, recognised market brands.",
     image: "/images/commodity-nickel.jpg",
-    imageAlt: "Coiled steel-grey metal wire in close macro detail.",
+    imageAlt: "Banded and palletised nickel ingots marked to a minimum purity.",
   },
   {
     index: "05",
@@ -138,7 +145,8 @@ export const COMMODITIES: Commodity[] = [
     category: "Bulk Commodities",
     description: "Fines and pellets to steelmaking specification.",
     image: "/images/commodity-iron-ore.jpg",
-    imageAlt: "Rust-red iron ore rock photographed at close range.",
+    imageAlt:
+      "Stockpiles of iron ore alongside a stacker and conveyor at a bulk terminal.",
   },
   {
     index: "06",
@@ -147,7 +155,9 @@ export const COMMODITIES: Commodity[] = [
     category: "Critical Minerals",
     description: "Oxides and concentrates for magnets and clean tech.",
     image: "/images/commodity-rare-earths.jpg",
-    imageAlt: "Iridescent mineral concentrate catching light against dark rock.",
+    imageAlt:
+      "A reference chart of rare earth minerals and separated oxides with their end uses.",
+    fit: "contain",
   },
 ];
 
