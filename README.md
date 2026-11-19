@@ -85,19 +85,41 @@ copy and imagery aligned across pages.
 
 ## The inquiry form
 
-`POST /api/inquiry` validates the submission and forwards it as JSON to
-whatever endpoint is configured:
+`POST /api/inquiry` validates the submission, then delivers it. Delivery is
+attempted in this order:
+
+**1. Resend (in use).** Set on the Worker in Cloudflare:
+
+```bash
+RESEND_API_KEY=re_...                                            # secret, never a plaintext variable
+INQUIRY_FROM="Atlas Offtake <inquiries@send.atlasofftake.com>"   # optional, this is the default
+INQUIRY_TO=inquiries@atlasofftake.com                            # optional, this is the default
+```
+
+The sending identity is a **subdomain** (`send.atlasofftake.com`), not the root
+domain. `atlasofftake.com` itself carries Google Workspace MX and SPF records
+for the real `inquiries@` mailbox; verifying a subdomain in Resend leaves those
+records untouched, so adding Resend cannot disturb the firm's own email.
+
+`Reply-To` carries the enquirer's own address, so replying from the inbox goes
+straight back to them rather than to the website.
+
+**2. Generic webhook (fallback).** Only used when `RESEND_API_KEY` is unset:
 
 ```bash
 INQUIRY_WEBHOOK_URL=https://your-provider.example/hook
 ```
 
-Any endpoint that accepts a JSON body works — a transactional email provider, a
-CRM intake, a Slack or Teams incoming webhook, or a form service.
+Any endpoint that accepts a JSON body works — a CRM intake, a Zapier or Make
+catch hook, or a form service. It receives
+`{ source, receivedAt, name, company, email, area, message }`.
 
-If the variable is **not** set the route returns `503` and the form shows the
-direct inbox address instead. This is deliberate: an inquiry is never silently
-accepted and dropped.
+**3. Neither set.** The route returns `503` and the form shows the direct inbox
+address instead. This is deliberate: an inquiry is never silently accepted and
+dropped.
+
+A hidden `website` field is a honeypot — if it is filled the route returns
+`200` and delivers nothing.
 
 The route also validates server-side (required fields, email shape, length
 caps) and drops honeypot submissions.
@@ -161,7 +183,9 @@ a `vw` fraction there makes the browser pick a candidate that is too small.
    `/privacy`, `/legal` and `/aml-policy`; all three return 404. Rather than
    invent legal or AML copy, those links are omitted from the footer. Add the
    documents and re-populate `LEGAL_NAV` in `src/lib/content.ts`.
-2. **Inquiry delivery.** Set `INQUIRY_WEBHOOK_URL` before launch.
+2. **Inquiry delivery.** Verify the `send` subdomain in Resend, add the
+   generated DNS records at Cloudflare, and set `RESEND_API_KEY` as a secret
+   on the Worker. Until that is done the form shows the direct inbox address.
 3. **Reversed logo lockup.** The sticky header and mobile menu sit on dark
    grounds, where the navy wordmark would be illegible, so they use a reversed
    lockup (`public/atlas-logo-reversed.png`): identical letterforms, "ATLAS"
