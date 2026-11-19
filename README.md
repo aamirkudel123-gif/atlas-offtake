@@ -104,6 +104,21 @@ records untouched, so adding Resend cannot disturb the firm's own email.
 `Reply-To` carries the enquirer's own address, so replying from the inbox goes
 straight back to them rather than to the website.
 
+The Resend domain is configured as follows. These are deliberate choices, not
+defaults:
+
+| Setting | Value | Why |
+| --- | --- | --- |
+| Region | `ap-northeast-1` (Tokyo) | Closest Resend region to Hong Kong. Enquiry data is not routed through the US. Cannot be changed after verification — the domain would have to be recreated. |
+| Open tracking | off | A tracking pixel on a business enquiry notification is pointless and quietly tracks the sender. |
+| Click tracking | off | Rewriting every link in a transactional notification hurts deliverability and obscures real URLs. |
+| TLS | `enforced` | The recipient is Google Workspace, which always supports TLS, so enquiry contents never travel in the clear. If `INQUIRY_TO` is ever pointed at a provider without TLS the message bounces visibly in the Resend log rather than silently downgrading. |
+| Receiving | disabled | The domain sends only. Inbound mail for the firm stays with Google Workspace on the root domain. |
+
+The root domain's own records are untouched: `atlasofftake.com` keeps its
+Google Workspace MX and SPF, and its existing `_dmarc` record (`p=none`)
+already covers the subdomain.
+
 **2. Generic webhook (fallback).** Only used when `RESEND_API_KEY` is unset:
 
 ```bash
