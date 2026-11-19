@@ -77,9 +77,14 @@ export default function ContactPage() {
 
                 <div className="mt-10 border-t border-hairline pt-7">
                   <p className="type-eyebrow text-stone">Registered Office</p>
-                  <p className="mt-5 type-lead text-chalk">
-                    {SITE.registeredOffice}
-                  </p>
+                  <address className="mt-5 type-body leading-relaxed text-chalk not-italic">
+                    {SITE.address.map((line, i) => (
+                      <span key={line}>
+                        {line}
+                        {i < SITE.address.length - 1 ? <br /> : null}
+                      </span>
+                    ))}
+                  </address>
                 </div>
 
                 <div className="mt-10 border-t border-hairline pt-7">

@@ -22,8 +22,19 @@ export const SITE = {
   tagline:
     "Strategic procurement and structured offtake for critical industrial commodities.",
   email: "inquiries@atlasofftake.com",
-  /** The only office. Regions elsewhere in this file are coverage, not sites. */
+  /**
+   * The only office. Regions elsewhere in this file are coverage, not sites.
+   * `registeredOffice` stays short for the copyright line; `address` carries
+   * the full registered address wherever there is room for it.
+   */
   registeredOffice: "Hong Kong SAR",
+  address: [
+    "Unit 18, 8/F, Peter Leung Industrial Building",
+    "103 Wai Yip Street",
+    "Kwun Tong, Hong Kong",
+  ],
+  /** Share-sheet tracking parameters stripped from the supplied link. */
+  linkedin: "https://www.linkedin.com/in/rathinam-p-a23a52107",
 } as const;
 
 export type NavItem = { label: string; href: string };

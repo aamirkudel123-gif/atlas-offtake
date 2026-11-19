@@ -63,11 +63,18 @@ export function SiteFooter() {
 
           <div className="col-span-12 sm:col-span-6 lg:col-span-3">
             <p className="type-eyebrow text-ink/60">Office</p>
-            <p className="mt-6 text-[0.9375rem] leading-relaxed text-ink/75">
+            <address className="mt-6 text-[0.9375rem] leading-relaxed text-ink/75 not-italic">
               Registered Office
               <br />
-              <span className="text-ink">{SITE.registeredOffice}</span>
-            </p>
+              <span className="text-ink">
+                {SITE.address.map((line, i) => (
+                  <span key={line}>
+                    {line}
+                    {i < SITE.address.length - 1 ? <br /> : null}
+                  </span>
+                ))}
+              </span>
+            </address>
 
             {LEGAL_NAV.length > 0 ? (
               <>
@@ -103,7 +110,7 @@ export function SiteFooter() {
           </p>
           <div className="flex items-center gap-6">
             <a
-              href="https://www.linkedin.com"
+              href={SITE.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="type-index text-ink/60 transition-colors duration-300 hover:text-navy"
